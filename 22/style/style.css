@@ -1,0 +1,10 @@
+.bg{
+    color: aqua;
+    background-color: blueviolet;
+    padding: 200px;
+}
+
+.hidden{
+    color: blue;
+    background-color: cadetblue;
+}

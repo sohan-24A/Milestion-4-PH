@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .comment{
+            border:  2px solid aqua;
+            background-color: lightcoral;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 20px;
+        }
+    </style>
+    <title>Comment Box</title>
+</head>
+<body>      
+    <h1> My Awesome comment Box . Write What in your mind !! </h1>
+    <section>
+        <h3> All comments here </h3>
+        <div id="comment-container" class="">
+            <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, ratione.</p>
+            <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, ratione.</p>
+            <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, ratione.</p>
+        </div>
+        <form >
+            <textarea name=""  id="text-comment" cols="60" rows="5"></textarea>
+            <br>
+            <button type="button" id="btn-post-comment"> post comment</button>
+        </form>
+    </section>
+    <script>
+        // step -- 1 : set an event handler to the button 
+        document.getElementById('btn-post-comment')
+        .addEventListener('click', function() {
+            // step -2 : set the text written in the comment text area
+            const textAreaBox = document.getElementById('text-comment');
+            const newComment = textAreaBox.value;
+            console.log(newComment);
+            // step 3
+            const commentContainer = document.getElementById('comment-container') 
+            // console.log(commentContainer);
+            // step 4
+            const commentElement = document.createElement('p');
+            commentElement.classList.add('comment');
+            commentElement.innerText = newComment;
+
+            // step 5
+            commentContainer.appendChild(commentElement)
+            textAreaBox.value = "";
+            
+        })
+    </script>
+</body>
+</html>

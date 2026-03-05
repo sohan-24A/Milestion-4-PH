@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour of DOM</title>
+    <!-- <link rel="stylesheet" href="style/style.css"> -->
+</head>
+
+<style>
+    h1 {
+        color: aqua;
+    }
+</style>
+
+<body>
+    <header>
+        <h1> This is my header no banner </h1>
+    </header>
+    <main>
+        <section>
+            <h1> Welcome to my DOM </h1>
+            <ul>
+                <li>sohan</li>
+                <li>sadia</li>
+                <li>sabina</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="food-title">Foods I love </h1>
+            <ul>
+                <li>Rice</li>
+                <li>Banna</li>
+                <li>Mango</li>
+                <li>Pizza</li>
+                <li id="potato">potato</li>
+            </ul>
+        </section>
+    </main>
+    <script>
+        // console.log("Hello from Javascript");
+        // console.log("Hello bole cole gelo");
+        // console.log("Document object Model");
+
+        const student = {
+            name: 'sohan',
+            id: 123,
+            study: function (sub) {
+                // console.log('studying sub :', sub);
+            }
+
+        }
+
+        const li = document.getElementsByTagName('li')
+        for (const lis of li) {
+            // console.log(lis.innerText);
+            // console.log(lis.innerHTML);
+        }
+
+        const allH1 = document.getElementsByTagName("h1")
+        for (const h1 of allH1) {
+            // console.log(h1.innerHTML);
+        }
+
+        // get id 
+
+        const foodTitle = document.getElementById('food-title')
+        console.log(foodTitle.innerText);
+
+        const potato = document.getElementById('potato')
+        potato.style.backgroundColor="aqua"
+    </script>
+    <script src="js/hello.js"></script>
+</body>
+
+</html>
